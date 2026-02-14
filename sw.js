@@ -1,3 +1,6 @@
+
+
+
 const CACHE_NAME = "puzzle-app-v1";
 
 const urlsToCache = [
@@ -66,3 +69,4 @@ self.addEventListener("fetch", event => {
       .then(response => response || fetch(event.request))
   );
 });
+
