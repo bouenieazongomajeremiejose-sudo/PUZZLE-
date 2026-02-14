@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Puzzle – Mondes & Niveaux</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
     <style>
           body {
@@ -209,13 +209,45 @@
           flex-wrap: wrap;
           gap: 5px;
         }
-      }
+      } 
+        .video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.bg-video {
+  filter: blur(6px);
+}.bg-media{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  z-index:-1;
+  transition: opacity 1s ease;
+}
+
+#bgImage{
+  opacity:0;
+}
+
+#bgVideo{
+  opacity:0;
+}
     </style>
   </head>
 
   <body>
     <h1>🧩 Puzzle Mondes & Niveaux</h1>
-
+<img id="bgImage" class="bg-media" src ="I">
+<video autoplay muted loop playsinline id="bgVideo" class="video">
+  <source id="videoSource" src="image/video.mp4" type="video/mp4">
+</video>
     <!-- UI TOP -->
     <div id="uiTop">
       <button id="pauseBtn">⏸ Pause</button>
@@ -286,10 +318,7 @@
     <script src="puzzle.js"></script>
 
     <!-- Lancement menu -->
-    <script>
-      afficherMenuMondes();
-      appliquerDecorMonde(mondeActuel());
-    </script>
+   
     <script>
       afficherMenuMondes();
       appliquerDecorMonde(mondeActuel());
@@ -345,5 +374,6 @@ bgVideo.load();
     </script>
   </body>
 </html>
+
 
 
