@@ -65,6 +65,11 @@ createPuzzle(levels[level]);
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
+window.addEventListener("load", () => {
+  const sound = document.getElementById("welcomeSound");
+  sound.play().catch(() => {});
+});
+
 
 
 
