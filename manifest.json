@@ -1,13 +1,21 @@
-self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open("puzzle-cache").then(cache => {
-      return cache.addAll([
-        "/",
-        "index.html",
-        "puzzle.html",
-        "script.js",
-        "puzzle.js"
-      ]);
-    })
-  );
-});
+{
+  "name": "Jeu Puzzle Progressif",
+  "short_name": "puzzle",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff9800",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "photo1.png"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "photo.png"
+    }
+  ]
+}
