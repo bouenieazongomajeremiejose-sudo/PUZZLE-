@@ -64,7 +64,47 @@ let taille = 3; // commence en 3x3
 let tailleCase;
 let modeDefi = true; // true = mode défi | false = mode normal
 let gameOver = false;
-const photos = ["image/photo1.jpg", "image/photo2.jpg", "image/photo3.jpg", "image/photo4.jpg"];
+const photos = ["image/photo1.jpg",
+  "image/photo1,1.jpg", 
+"image/photo1,2.jpg", 
+ "image/photo4.jpg",
+  "image/photo5.jpg",
+  "image/photo6.jpg",
+  "image/photo7.jpg",
+  "image/photo8.jpg",
+  "image/photo9.jpg",
+  "image/photo10.jpg",
+  "image/photo11.jpg",
+  "image/photo12.jpg",
+  "image/photo13.jpg",
+  "image/photo14.jpg",
+  "image/photo15.jpg",
+  "image/photo16.jpg",
+  "image/photo17.jpg",
+  "image/photo18.jpg",
+  "image/photo19.jpg",
+  "image/photo20.jpg",
+  "image/photo21.jpg",
+  "image/photo22.jpg",
+  "image/photo23.jpg",
+  "image/photo24.jpg",
+  "image/photo25.jpg",
+  "image/photo26.jpg",
+  "image/photo27.jpg",
+  "image/photo28.jpg",
+  "image/photo29.jpg",
+  "image/photo30.jpg",
+  "image/photo31.jpg",
+  "image/photo32.jpg",
+  "image/photo33.jpg",
+  "image/photo34.jpg",
+  "image/photo35.jpg",
+  "image/photo36.jpg",
+  "image/photo37.jpg",
+  "image/photo38.jpg",
+  "image/photo39.jpg",
+  "image/photo40.jpg"
+               ];
 let indexPhoto = 0;
 const canvas = document.getElementById("puzzleCanvas");
 const ctx = canvas.getContext("2d");
@@ -662,6 +702,8 @@ function appliquerDecorMonde(monde) {
   const decor = genererDecorMonde(monde);
   document.body.style.background = decor.bg;
   canvas.style.filter = decor.filtre;
+  
+  appliquerVideoMonde(monde); // 🔥 VIDEO CHANGE ICI
 }
  
 function aideSelonMonde(monde, ratioTemps) {
@@ -771,7 +813,8 @@ function appliquerVideoMonde(monde) {
 
   source.src = videos[index];
   video.load();
-}const medias = [
+}
+const medias = [
   { type: "image", src: "image/photo1.jpg" },
   { type: "video", src: "image/video.mp4" },
   { type: "image", src: "image/photo2.jpg" },
@@ -797,32 +840,30 @@ function appliquerVideoMonde(monde) {
 { type: "image", src: "image/photo19.jpg" },
 { type: "image", src: "image/photo20.jpg" },
 { type: "image", src: "image/photo21.jpg" },
-{ type: "image", src: "image/photo1.jpg" },
-  { type: "image", src: "image/photo22.jpg"),
-{ type: "image",  src:  "image/photo23.jpg"),
-{ type: "image", src:   "image/photo24.jpg"),
-  { type: "image",src:  "image/photo25.jpg"),
-{ type: "image",   src: "image/photo26.jpg"),
- { type: "image", src:  "image/photo27.jpg"),
-{ type: "image",  src:  "image/photo28.jpg"),
-{ type: "image", src: "image/photo29.jpg"),
-{ type: "image", src: "image/photo29.jpg"),
-{ type: "image", src: "image/photo29.jpg"),
-{ type: "image", src: "image/photo30.jpg"),
-{ type: "image", src: "image/photo30.jpg"),
-{ type: "image", src: "image/photo31.jpg"),
-{ type: "image",  src:"image/photo32.jpg"),
-{ type: "image",  src:"image/photo33.jpg"),
-{ type: "image",  src:"image/photo34.jpg"),
-{ type: "image", src: "image/photo35.jpg"),
-{ type: "image",src:  "image/photo36.jpg"),
-{ type: "image",src:  "image/photo37.jpg"),
-{ type: "image", src: "image/photo38.jpg"),
-{ type: "image",  src:"image/photo39.jpg"),
-{ type: "image",src: "image/photo40.jpg"),
-  { type: "video", src: "image/VIDEO2.mp4" }
+{ type: "image", src: "image/photo22.jpg" },
+{ type: "image",  src:  "image/photo23.jpg"},
+{ type: "image", src:   "image/photo24.jpg"},
+  { type: "image",src:  "image/photo25.jpg"},
+{ type: "image",   src: "image/photo26.jpg"},
+ { type: "image", src:  "image/photo27.jpg"},
+{ type: "image",  src:  "image/photo28.jpg"},
+{ type: "image", src: "image/photo29.jpg"},
+{ type: "image", src: "image/photo29.jpg"},
+{ type: "image", src: "image/photo29.jpg"},
+{ type: "image", src: "image/photo30.jpg"},
+{ type: "image", src: "image/photo30.jpg"},
+{ type: "image", src: "image/photo31.jpg"},
+{ type: "image",  src:"image/photo32.jpg"},
+{ type: "image",  src:"image/photo33.jpg"},
+{ type: "image",  src:"image/photo34.jpg"},
+{ type: "image", src: "image/photo35.jpg"},
+{ type: "image",src:  "image/photo36.jpg"},
+{ type: "image",src:  "image/photo37.jpg"},
+{ type: "image",src: "image/photo38.jpg"},
+{ type: "image",src:"image/photo39.jpg"},
+{ type: "image",src: "image/photo40.jpg"},
+{ type: "video",src: "image/VIDEO2.mp4" }
 ];
-
 let current = 0;
 
 function changerBackground(){
@@ -857,8 +898,4 @@ changerBackground();
 
 // Change toutes les 30 secondes
 setInterval(changerBackground, 30000);
-
-
-
-
 
