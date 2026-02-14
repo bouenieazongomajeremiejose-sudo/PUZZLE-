@@ -62,5 +62,9 @@ function nextLevel() {
 // Lancement du jeu
 createPuzzle(levels[level]);
 
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
 
 
