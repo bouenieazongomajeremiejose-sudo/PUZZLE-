@@ -1,3 +1,5 @@
+
+
 function go(mode){
   document.body.classList.add("fade-out");
 
