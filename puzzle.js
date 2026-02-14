@@ -755,3 +755,109 @@ document.getElementById("btnMODE").addEventListener("click", () => {
   }
 });
 
+function appliquerVideoMonde(monde) {
+
+  const videos = [
+    "image/video.mp4",
+    "image/vidéo 4.mp4",
+    "image/VIDEO2.mp4",
+    
+  ];
+
+  const index = (monde - 1) % videos.length;
+
+  const video = document.getElementById("bgVideo");
+  const source = document.getElementById("videoSource");
+
+  source.src = videos[index];
+  video.load();
+}const medias = [
+  { type: "image", src: "image/photo1.jpg" },
+  { type: "video", src: "image/video.mp4" },
+  { type: "image", src: "image/photo2.jpg" },
+  { type: "video", src: "image/video2.mp4" },
+   type: "image", src: "image/photo1,1.jpg" },
+  { type: "video", src: "image/vidéO 4.mp4" },
+  { type: "image", src: "image/photo1,2.jpg" },
+{ type: "image", src: "image/photo4.jpg" },
+{ type: "image", src: "image/photo5.jpg" },
+{ type: "image", src: "image/photo6.jpg" },
+{ type: "image", src: "image/photo7.jpg" },
+{ type: "image", src: "image/photo8.jpg" },
+{ type: "image", src: "image/photo9.jpg" },
+{ type: "image", src: "image/photo10.jg" },
+{ type: "image", src: "image/photo11.jpg" },
+{ type: "image", src: "image/photo12.jpg" },
+{ type: "image", src: "image/photo13.jpg" },
+{ type: "image", src: "image/photo14.jpg" },
+{ type: "image", src: "image/photo15.jpg" },
+{ type: "image", src: "image/photo16.jpg" },
+{ type: "image", src: "image/photo17.jpg" },
+{ type: "image", src: "image/photo18.jpg" },
+{ type: "image", src: "image/photo19.jpg" },
+{ type: "image", src: "image/photo20.jpg" },
+{ type: "image", src: "image/photo21.jpg" },
+{ type: "image", src: "image/photo1.jpg" },
+                      "image/photo22.jpg"),
+{ type: "image",  src:  "image/photo23.jpg"),
+{ type: "image", src:   "image/photo24.jpg"),
+  { type: "image",src:  "image/photo25.jpg"),
+{ type: "image",   src: "image/photo26.jpg"),
+ { type: "image", src:  "image/photo27.jpg"),
+{ type: "image",  src:  "image/photo28.jpg"),
+{ type: "image", src: "image/photo29.jpg"),
+{ type: "image", src: "image/photo29.jpg"),
+{ type: "image", src: "image/photo29.jpg"),
+{ type: "image", src: "image/photo30.jpg"),
+{ type: "image", src: "image/photo30.jpg"),
+{ type: "image", src: "image/photo31.jpg"),
+{ type: "image",  src:"image/photo32.jpg"),
+{ type: "image",  src:"image/photo33.jpg"),
+{ type: "image",  src:"image/photo34.jpg"),
+{ type: "image", src: "image/photo35.jpg"),
+{ type: "image",src:  "image/photo36.jpg"),
+{ type: "image",src:  "image/photo37.jpg"),
+{ type: "image", src: "image/photo38.jpg"),
+{ type: "image",{ type: "image",  src:"image/photo39.jpg"),
+{ type: "image",src: "image/photo40.jpg"),
+  { type: "video", src: "image/VIDEO2.mp4" }
+];
+
+let current = 0;
+
+function changerBackground(){
+
+  const bgImage = document.getElementById("bgImage");
+  const bgVideo = document.getElementById("bgVideo");
+  const videoSource = document.getElementById("videoSource");
+
+  // cacher les deux
+  bgImage.style.opacity = 0;
+  bgVideo.style.opacity = 0;
+
+  const media = medias[current];
+
+  if(media.type === "image"){
+    bgImage.src = media.src;
+    bgImage.style.opacity = 1;
+  } else {
+    videoSource.src = media.src;
+    bgVideo.load();
+    bgVideo.style.opacity = 1;
+  }
+
+  current++;
+  if(current >= medias.length){
+    current = 0;
+  }
+}
+
+// Lance immédiatement
+changerBackground();
+
+// Change toutes les 30 secondes
+setInterval(changerBackground, 30000);
+
+
+
+
