@@ -62,11 +62,24 @@ p{
   cursor:pointer;
   color:white;
 }
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+body.fade-out {
+  opacity: 0;
+}
+body.fade-out {
+  opacity:url("photo.jpg") center/cover no-repeat;
+}
 
 .puzzle{background:#ff9800}
-.bubble{background:#03a9f4}
-.question{background:#4caf50}
-.ia{background:#9c27b0}
+
 
 </style>
 </head>
@@ -77,9 +90,12 @@ p{
 
 <div class="container">
   <div class="card">
-    <h1>Ruthannick Aprende</h1>
-    <p>Choisis un mode</p>
+    <h1>Ruthannick puzzle</h1>
+ 
 
+<video autoplay muted loop playsinline  class="video">
+  <source src="image/video.mp4" type="video/mp4">
+</video>
     <div class="menu">
      <button class="puzzle" onclick="go('puzzle')">🧩 Puzzle</button>
     
@@ -88,6 +104,11 @@ p{
   </div>
 </div>
 <script src="script.js"></script>
-
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
 </body>
 </html>
+
