@@ -775,10 +775,10 @@ function appliquerVideoMonde(monde) {
   { type: "image", src: "image/photo1.jpg" },
   { type: "video", src: "image/video.mp4" },
   { type: "image", src: "image/photo2.jpg" },
-  { type: "video", src: "image/video2.mp4" },
-   type: "image", src: "image/photo1,1.jpg" },
-  { type: "video", src: "image/vidéO 4.mp4" },
-  { type: "image", src: "image/photo1,2.jpg" },
+{ type: "video", src: "image/video2.mp4" },
+ { type: "image", src: "image/photo1,1.jpg" },
+{ type: "video", src: "image/vidéO 4.mp4" },
+ { type: "image", src: "image/photo1,2.jpg" },
 { type: "image", src: "image/photo4.jpg" },
 { type: "image", src: "image/photo5.jpg" },
 { type: "image", src: "image/photo6.jpg" },
@@ -798,7 +798,7 @@ function appliquerVideoMonde(monde) {
 { type: "image", src: "image/photo20.jpg" },
 { type: "image", src: "image/photo21.jpg" },
 { type: "image", src: "image/photo1.jpg" },
-                      "image/photo22.jpg"),
+  { type: "image", src: "image/photo22.jpg"),
 { type: "image",  src:  "image/photo23.jpg"),
 { type: "image", src:   "image/photo24.jpg"),
   { type: "image",src:  "image/photo25.jpg"),
@@ -818,7 +818,7 @@ function appliquerVideoMonde(monde) {
 { type: "image",src:  "image/photo36.jpg"),
 { type: "image",src:  "image/photo37.jpg"),
 { type: "image", src: "image/photo38.jpg"),
-{ type: "image",{ type: "image",  src:"image/photo39.jpg"),
+{ type: "image",  src:"image/photo39.jpg"),
 { type: "image",src: "image/photo40.jpg"),
   { type: "video", src: "image/VIDEO2.mp4" }
 ];
@@ -857,6 +857,7 @@ changerBackground();
 
 // Change toutes les 30 secondes
 setInterval(changerBackground, 30000);
+
 
 
 
